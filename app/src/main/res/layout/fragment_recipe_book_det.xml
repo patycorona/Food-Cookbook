@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_det"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/commo_padding_min"
+    android:background="@color/light_brown"
+    >
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/link_Regresar"
+            android:textColor="@color/text_color_reg"/>
+    </Toolbar>
+
+    <ImageView
+        android:id="@+id/img_platillo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_recipebook_height"
+        android:src="@drawable/pozole"
+        android:layout_marginTop="@dimen/commo_padding_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NombrePlatillo"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/commo_padding_min"
+        app:layout_constraintTop_toBottomOf="@id/img_platillo"
+        style="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/et_recipebook_det"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:ems="@integer/recipebook_line_max"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="@string/text_recipebook"
+        android:layout_marginTop="@dimen/commo_padding_min"
+        android:layout_marginBottom="@dimen/commo_padding_min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

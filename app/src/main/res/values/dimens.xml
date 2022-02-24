@@ -3,4 +3,11 @@
     <dimen name="commo_padding_min">8dp</dimen>
     <dimen name="commo_padding_default">16dp</dimen>
     <dimen name="commo_padding_middle">24dp</dimen>
+    <dimen name="marginTop_ItemRB">50dp</dimen>
+    <dimen name="edit_text_width">210dp</dimen>
+    <dimen name="marginTop_login">150dp</dimen>
+    <dimen name="text_Size">20dp</dimen>
+    <dimen name="item_recipebook_height">150dp</dimen>
+    <dimen name="spacing_24dp">24dp</dimen>
+    <dimen name="modal_height">750dp</dimen>
 </resources>

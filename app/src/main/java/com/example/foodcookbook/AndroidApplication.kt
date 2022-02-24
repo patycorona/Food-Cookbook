@@ -1,4 +1,8 @@
 package com.example.foodcookbook
 
-class AndroidApplication {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class AndroidApplication : Application() {
 }
