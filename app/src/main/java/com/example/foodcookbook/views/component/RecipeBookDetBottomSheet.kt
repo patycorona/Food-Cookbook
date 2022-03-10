@@ -19,7 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 //private val recipeBook: String,
 @AndroidEntryPoint
 class RecipeBookDetBottomSheet (private val title:String,
-                                private val photo:Int,
+                                private val photo:String,
                                 private val recipeBook:String
 )  : BottomSheetDialogFragment() {
     private var binding: FragmentRecipeBookDetBinding? = null
@@ -106,7 +106,7 @@ class RecipeBookDetBottomSheet (private val title:String,
         private const val HEIGHT = .90
 
         @JvmStatic
-        fun newInstance(title: String, photo: Int, recipeBook: String): RecipeBookDetBottomSheet {
+        fun newInstance(title: String, photo: String, recipeBook: String): RecipeBookDetBottomSheet {
             return RecipeBookDetBottomSheet(title, photo, recipeBook)
         }
     }

@@ -1,14 +1,15 @@
 package com.example.foodcookbook.models
 
-data class RecipeBook(
-    var idRecipebook:Int,
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+ class RecipeBook(
+    var idRecipebook:String,
     var nameRecipebook: String = "",
-    var productPhoto: Int,
+    var productPhoto: String = "",
     var author: String = "",
-    var recipeBook: String = ""
-
-) {
-    fun add(product: RecipeBook) {
-
-    }
+    var recipeBook: String = "",
+    var created_at: String = ""
+): Parcelable{
 }

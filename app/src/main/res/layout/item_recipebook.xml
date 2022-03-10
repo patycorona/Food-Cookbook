@@ -5,14 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_item_recipebook"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/item_recipebook_height"
-    android:layout_marginTop="@dimen/commo_padding_min"
-    android:layout_marginHorizontal="@dimen/commo_padding_min">
+    android:layout_height="90dp">
 
     <ImageView
         android:id="@+id/img_product"
         android:layout_width="@dimen/marginTop_login"
         android:layout_height="@dimen/marginTop_login"
+        android:layout_marginStart="@dimen/commo_padding_middle"
         android:background="@color/light_brown"
         android:contentDescription="@string/description_img_product"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,27 +19,42 @@
 
     <TextView
         android:id="@+id/tv_nombrePlatillo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="@dimen/marginTop_login"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/commo_padding_default"
+        android:layout_marginTop="10dp"
+        android:lines="@integer/recipebook_line_min"
         android:text="@string/NombrePlatillo"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/marginTop_ItemRB"
-        android:layout_marginStart="@dimen/commo_padding_min"
-        style="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toEndOf="@id/img_product"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_Author"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/commo_padding_middle"
-        android:layout_marginStart="@dimen/commo_padding_min"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="36dp"
+        android:gravity="left"
         android:text="@string/author"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_product"
-        app:layout_constraintTop_toTopOf="@id/tv_nombrePlatillo" />
+        app:layout_constraintTop_toTopOf="@id/tv_nombrePlatillo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_product"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

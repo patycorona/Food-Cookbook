@@ -7,9 +7,9 @@
     android:id="@+id/container_det"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/commo_padding_min"
-    android:background="@color/light_brown"
-    >
+    android:layout_margin="@dimen/commo_padding_middle"
+    android:background="@color/light_brown" >
+
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -32,6 +32,8 @@
         android:layout_height="@dimen/item_recipebook_height"
         android:src="@drawable/pozole"
         android:layout_marginTop="@dimen/commo_padding_middle"
+        android:layout_marginStart="@dimen/commo_padding_min"
+        android:layout_marginEnd="@dimen/commo_padding_min"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -44,6 +46,8 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginTop="@dimen/commo_padding_min"
+        android:layout_marginStart="@dimen/commo_padding_min"
+        android:layout_marginEnd="@dimen/commo_padding_min"
         app:layout_constraintTop_toBottomOf="@id/img_platillo"
         style="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,12 +62,10 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:text="@string/text_recipebook"
-        android:layout_marginTop="@dimen/commo_padding_min"
-        android:layout_marginBottom="@dimen/commo_padding_min"
+       android:layout_margin="@dimen/commo_padding_min"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_titulo"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

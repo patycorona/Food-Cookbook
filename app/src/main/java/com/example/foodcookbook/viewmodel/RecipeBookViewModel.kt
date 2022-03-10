@@ -1,10 +1,12 @@
 package com.example.foodcookbook.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.foodcookbook.models.RecipeBookResult
+import com.example.foodcookbook.models.*
 import com.example.foodcookbook.repository.RecipeBookRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.schedulers.Schedulers
@@ -22,14 +24,19 @@ class RecipeBookViewModel @Inject constructor(
         MutableLiveData<RecipeBookResult>()
     }
 
+    val userAccessResult : MutableLiveData<AccessResultModel> by lazy {
+        MutableLiveData<AccessResultModel>()
+    }
+
     fun getRecipebook(){
+
         compositeDisposable += recipeBookRepository.getRecipebooks()
             .subscribeOn(Schedulers.io())
-            .subscribe({listProduct ->
+            .subscribe({listRecipeBook ->
                 listRecipeBooks.postValue(
                     RecipeBookResult(
                         sussess = true,
-                        list = listProduct
+                        list = listRecipeBook
                     )
                 )
 
@@ -39,7 +46,21 @@ class RecipeBookViewModel @Inject constructor(
                         sussess = false
                     )
                 )
+            })
+    }
 
+    fun userValidation(email:String,pwd:String,userId:String) {
+
+        compositeDisposable += recipeBookRepository.userAccess(
+            user = email, password = pwd, userId = userId)
+            .subscribeOn(Schedulers.io())
+            .subscribe({ accessResultModel ->
+                userAccessResult.postValue(accessResultModel)
+            }, {
+                userAccessResult.postValue(AccessResultModel(
+                    code = "-1",
+                    message = "an exception occurred"
+                ))
             })
     }
 

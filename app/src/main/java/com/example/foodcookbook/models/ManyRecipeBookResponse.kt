@@ -3,5 +3,6 @@ package com.example.foodcookbook.models
 import com.google.gson.annotations.SerializedName
 
 class ManyRecipeBookResponse {
-    @SerializedName("product") val products: MutableList<RecipeBookResponse> = mutableListOf()
+
+    @SerializedName("recipes") val recipeBooks: MutableList<RecipeBookResponse> = mutableListOf()
 }

@@ -10,8 +10,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:listitem="@layout/item_recipebook"
         android:paddingBottom="@dimen/commo_padding_min"
         android:padding="@dimen/commo_padding_min"
