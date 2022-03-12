@@ -1,8 +1,6 @@
 package com.example.foodcookbook.api
 
-import com.example.foodcookbook.models.ManyRecipeBookResponse
-import com.example.foodcookbook.models.UserAccessRequest
-import com.example.foodcookbook.models.UserAccessResponse
+import com.example.foodcookbook.models.*
 import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -18,5 +16,9 @@ interface CoreHomeApi {
     @POST("/access")
     @Headers("Content-Type: application/json ")
     fun userAccess( @Body userAccessRequest: UserAccessRequest): Single<UserAccessResponse>
+
+    @POST("/registerUser")
+    @Headers("Content-Type: application/json ")
+    fun userRegister( @Body userRegisterRequest: UserRegisterRequest): Single<UserAccessResponse>
 
 }

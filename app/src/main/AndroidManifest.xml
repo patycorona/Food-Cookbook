@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodCookbook">
         <activity
-            android:name=".activities.RegistroUsuario"
+            android:name=".views.Register.UserRegisterActivity"
             android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"

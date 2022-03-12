@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Food cookbook</string>
-    <string name="user_name">Usuario: </string>
-    <string name="password">Contraseña: </string>
+    <string name="user_name">User: </string>
+    <string name="password">Password: </string>
+    <string name="birthday">Birthday: </string>
+    <string name="repeatPassword">Repeat password: </string>
     <string name="link_Reg"><u>Registro</u></string>
     <string name="link_Regresar"><u>Regresar</u></string>
     <string name="link_Salir"><u>Salir</u></string>
@@ -37,5 +39,10 @@ Sirva tu pozole rojo en un plato pozolero y coloca la guarnición a un lado.
 
 ¡Buen provecho!
     </string>
+    <string name="first_name">First Name:</string>
+    <string name="title_userRegister">User Register</string>
+    <string name="last_name">Last Name:</string>
+    <string name="email">Email:</string>
+    <string name="app_text_Register">To Register</string>
 
 </resources>

@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.example.foodcookbook.models.*
 import com.example.foodcookbook.repository.RecipeBookRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.schedulers.Schedulers

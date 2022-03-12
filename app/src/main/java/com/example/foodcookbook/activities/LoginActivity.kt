@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import com.example.foodcookbook.databinding.ActivityLoginBinding
 import com.example.foodcookbook.models.AccessResultModel
 import com.example.foodcookbook.viewmodel.RecipeBookViewModel
+import com.example.foodcookbook.views.Register.UserRegisterActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -58,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun startActivityRegistroUsu() {
-        startActivity(Intent(this, RegistroUsuario::class.java))
+        startActivity(Intent(this, UserRegisterActivity::class.java))
         finish()
     }
 
@@ -66,4 +67,5 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
+
 }
