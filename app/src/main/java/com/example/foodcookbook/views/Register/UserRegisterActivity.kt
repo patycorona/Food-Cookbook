@@ -53,6 +53,7 @@ class UserRegisterActivity : AppCompatActivity() {
                 Toast.makeText(this,"password and repeat password does not match", Toast.LENGTH_SHORT).show()
             }
         }
+
         binding?.tvRegresar?.setOnClickListener {
             startActivityLogin()
         }

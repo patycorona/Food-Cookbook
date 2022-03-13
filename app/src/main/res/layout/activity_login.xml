@@ -41,7 +41,6 @@
         android:id="@+id/ed_userName"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="@dimen/height_login"
-        android:text="admin@admin.com"
         android:layout_marginTop="@dimen/marginTop_login"
         app:layout_constraintStart_toEndOf="@+id/tvName"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +62,6 @@
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="@dimen/height_login"
         android:layout_marginTop="@dimen/commo_padding_default"
-        android:text="Password123"
         app:layout_constraintStart_toEndOf="@+id/tvPassword"
         app:layout_constraintTop_toBottomOf="@+id/ed_userName" />
 
