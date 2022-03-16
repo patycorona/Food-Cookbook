@@ -49,7 +49,6 @@ class UserRegisterActivity : AppCompatActivity() {
                 )
             }
             else{
-                binding?.btnUserRegister?.isEnabled = false
                 Toast.makeText(this,"password and repeat password does not match", Toast.LENGTH_SHORT).show()
             }
         }

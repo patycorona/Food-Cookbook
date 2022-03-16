@@ -8,18 +8,27 @@
     android:background="@color/light_brown"
     tools:context=".activities.MainActivity">
 
+        <TextView
+            android:id="@+id/tv_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commo_padding_middle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/link_Regresar"
+            android:textColor="@color/text_color_reg"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop= "@dimen/height_login"
         tools:listitem="@layout/item_recipebook"
         android:paddingBottom="@dimen/commo_padding_min"
         android:padding="@dimen/commo_padding_min"
         android:clipToPadding="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_regresar"        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
